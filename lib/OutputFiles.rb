@@ -139,12 +139,13 @@ def trim_file(svg_path)
 end
 
 def systeme
-  # TODO Il faut traiter le cas d'un nombre de portées fixé par un entier
   @systeme ||= begin
     if data.options['piano']
       'piano'
     elsif data.options['quatuor']
       'quatuor'
+    elsif data.options['staves']
+      data.options['staves'].to_i
     else
       'solo'
     end

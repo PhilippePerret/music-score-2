@@ -153,10 +153,12 @@ def traite_as_code_mscore(line, idx)
 end
 
 def traite_as_option(opt)
-  opt, setting = opt.split(' ')
+  o = opt.split(' ')
+  opt = o.shift
+  setting = o.empty? ? nil : o.join(' ')
   val = case setting
     when 'OFF', 'Off', 'off' then false
-    when nil then true
+    when NilClass then true
     else setting # la valeur de l'option, p.e. pour mesure, ou time
     end
 

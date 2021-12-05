@@ -34,6 +34,7 @@ a'8 b cis d cis4 cis
 --mesure 12
 --proximity 7
 mes12<->15
+mes12<->15
 
 ~~~
 
@@ -101,7 +102,9 @@ a'8 b cis d cis4 cis
 --mesure 12
 # L'éloignement horizontal entre les notes
 --proximity 7
-# Indique de la mesure 12 à la mesure 15
+# Indique de la mesure 12 à la mesure 15, à la
+# main gauche et à la main droite
+mes12<->15
 mes12<->15
 
 ~~~
@@ -110,10 +113,7 @@ mes12<->15
 
 #### Après la production de l'image
 
-  * l'ouvrir dans Affinity Designer (sauf si l'option `--open` a été utilisée et que l'image est automatiquement ouverte),
-  * sélectionner tous les objets et les groupes nécessaires
-  * exporter seulement la sélection 
-(CMD-ALT-MAJ-s, format SVG, exporter sélection)
+Après la production du code, l’image est automatiquement rognée par inskape.
 
 ---
 

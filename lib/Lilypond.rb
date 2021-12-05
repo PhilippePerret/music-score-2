@@ -29,8 +29,17 @@ attr_reader :options
 #
 # @param {Array} code     Les lignes de code (code Lilypond)
 # @param {Hash}  options  Les options
+#     Note :  la méthode options.to_sym permet d'avoir les clés en
+#             String et en Symbol, peu importe.
 #
 def compose(code, options)
+  options = options.to_sym
+  if options.key?('staves_keys')
+    options['staves_keys'] = options['staves_keys'].split(',').collect{|n|n.strip}
+  end
+  if options.key?('staves_names')
+    options['staves_names'] = options['staves_names'].split(',').collect{|n|n.strip}
+  end
   @options = options
   header + body(code, options[:system]) + footer
 end
@@ -43,13 +52,14 @@ end
 #         solo        Une seule portée
 #         piano       Piano
 #         quatuor     Quatuor à corde
-#         Un nombre de mesures.
+#         Un nombre de portées.
 #
 def body(code, system)
   case system
   when 'solo', 'piano', 'quatuor' then send("system_for_#{system}", code)
-  when Integer then
-
+  when Integer then system_for_x_staves(code)
+  else
+    raise EMusicScore.new("La valeur '#{system}' pour 'system' est intraitable… (inconnue)")
   end
 end
 
@@ -100,13 +110,27 @@ def system_for_piano(code)
 end
 #/system_for_piano
 
+def system_for_x_staves(code)
+  c = []
+  c << "\\Score {"
+  c << "  \\new StaffGroup <<"
+  code.each_with_index do |code_portee, idx|
+    c << staff_for(code_portee, {name:options['staves_names'][idx], key:options['staves_keys'][idx]})
+  end
+  c << "  >>"
+  c << "}"
+
+  return c.join("\n")
+end
+#/system_for_x_staves
+
 def system_for_quatuor(code)
   <<-LILYPOND
 \\Score {
   \\new StaffGroup <<
     #{staff_for(code[0], {name:'Violon 1'})}
     #{staff_for(code[1], {name:'Violon 2'})}
-    #{staff_for(code[2], {name:'Alto', key: 'alto'})}
+    #{staff_for(code[2], {name:'Alto',  key: 'alto'})}
     #{staff_for(code[3], {name:'Cello', key: 'bass'})}
   >>
 }
@@ -117,12 +141,17 @@ end
 def staff_for(code, params)
   staff_name = ""
   if params[:name]
-    staff_name = "\\set Staff.instrumentName = #\"Violin 2 \"\n"
+    staff_name = "\\set Staff.instrumentName = #\"#{params[:name]} \"\n"
   end
-  staff_cle = params[:key] ? "\\clef #{params[:key]}\n" : ""
+  relative = case params[:key]
+  when 'F'    then ''
+  when /^UT/  then "'"
+  else "''"
+  end
+  staff_cle = params[:key] ? "\\clef #{CLE_TO_CLE_LILY[params[:key]]}\n" : ""
   <<-LILYPOND
 \\new Staff <<
-  \\new Voice \\relative c'' {
+  \\new Voice \\relative c#{relative} {
     #{staff_name}#{staff_cle}
     #{option_no_time}
     #{option_no_barre}
