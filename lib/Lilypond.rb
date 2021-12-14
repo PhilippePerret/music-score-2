@@ -33,15 +33,37 @@ attr_reader :options
 #             String et en Symbol, peu importe.
 #
 def compose(code, options)
-  options = options.to_sym
+  rationnalise_options(options)
+  header + body(code, options[:system]) + footer
+end
+
+def rationnalise_options(options)
+  #
+  # Si les clés des portées sont définies, il faut les dispatcher
+  #
   if options.key?('staves_keys')
     options['staves_keys'] = options['staves_keys'].split(',').collect{|n|n.strip}
   end
+  #
+  # Si les noms des portées sont définies, il faut les dispatcher
+  #
   if options.key?('staves_names')
     options['staves_names'] = options['staves_names'].split(',').collect{|n|n.strip}
   end
-  @options = options
-  header + body(code, options[:system]) + footer
+  #
+  # Si les clés ou les noms des portées sont définies, il faut
+  # avoir les clés ET les noms
+  #
+  if options.key?('staves_keys') && !options.key?('staves_names')
+    options.merge!('staves_names' => [])
+  elsif options.key?('staves_names') && !options.key?('staves_keys')
+    options.merge!('staves_keys' => [])
+  end
+  #
+  # On ajoute les clés symboliques (donc on aura les deux versions
+  # des clés dans la table)
+  #
+  @options = options.to_sym
 end
 
 ##
