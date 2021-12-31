@@ -48,7 +48,7 @@ Ce code, traité par le script `music-score.rb`, va produire l’image suivante 
 
 
 
-<img src="Manuel/images/exemples/partition-12a15.svg" />
+<img src="images/exemples/partition-12a15.svg" />
 
 
 
@@ -172,12 +172,12 @@ Toutes ces options peuvent être utilisées au début du code ou à n’importe 
 
 | <span style="display:inline-block;width: 150px">Valeur de `proximity`</span> | Rendu                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Non définie                                                  | <img src="Manuel/images/exemples/sans-proximity.svg" style=" width:400px;" /><br />*(correspond ici à la proximité 5)*|
-| **`--proximity 1`**                                          | <img src="Manuel/images/exemples/proximity-prox1.svg" style=" width:300px;" /> |
-| **`--proximity 5`**                                          | <img src="Manuel/images/exemples/proximity-prox5.svg" style=" width:400px;" /> |
-| **`--proximity 10`**                                         | <img src="Manuel/images/exemples/proximity-prox10.svg" style=" width:500px;" /> |
-| **`--proximity 20`**                                         | <img src="Manuel/images/exemples/proximity-prox20.svg" style=" width:650px;" /> |
-| **`--proximity 50`**                                         | <img src="Manuel/images/exemples/proximity-prox50.svg" style=" width:800px;" /> |
+| Non définie                                                  | <img src="images/exemples/sans-proximity.svg" style=" width:400px;" /><br />*(correspond ici à la proximité 5)*|
+| **`--proximity 1`**                                          | <img src="images/exemples/proximity-prox1.svg" style=" width:300px;" /> |
+| **`--proximity 5`**                                          | <img src="images/exemples/proximity-prox5.svg" style=" width:400px;" /> |
+| **`--proximity 10`**                                         | <img src="images/exemples/proximity-prox10.svg" style=" width:500px;" /> |
+| **`--proximity 20`**                                         | <img src="images/exemples/proximity-prox20.svg" style=" width:650px;" /> |
+| **`--proximity 50`**                                         | <img src="images/exemples/proximity-prox50.svg" style=" width:800px;" /> |
 |                                                              |                                                              |
 
 
@@ -268,6 +268,7 @@ Cette section présente les notations de l'expression pseudo-lilypond qui  diff�
 | Fin et début de reprise                                      | **`:|:`** |                                                              |
 | (*Code Lilypond pour les autres barres*)                     |           |                                                              |
 | Fin de pièce                                                 | **`|.`**  |                                                              |
+| Séparation de partie                                         | \|\|      |                                                              |
 
 TODO La gestion des reprises avec première et autres fois
 
@@ -278,15 +279,15 @@ plus pratique d'utiliser :
 
 | <span style="display:inline-block;width:200px;">Objet</span> | Code         | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ------------ | ------------------------------------------------------------ |
-| <img src="Manuel/images/exemples/cle-de-sol-2e.svg" style="  width:150px;" />                 |      **`\cle G`**        |      Clé de SOL 2<sup>e</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-de-fa-4e.svg" style="  width:150px;" /> | **`\cle F`** | Clé de FA 4<sup>e</sup> ligne                                    |
-| <img src="Manuel/images/exemples/cle-de-sol-1ere.svg" style="  width:150px;" />                 |      **`\cle G1`**        |      Clé de SOL 1<sup>ère</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-de-fa-3e.svg" style="  width:150px;" />                 |      **`\cle F3`**        |      Clé de FA 3<sup>e</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-ut-1ere.svg" style="  width:150px;" />                 |      **`\cle UT1`**        |      Clé d'UT 1<sup>ère</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-ut-2e.svg" style="  width:150px;" />                 |      **`\cle UT2`**        |      Clé d'UT 2<sup>e</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-ut-3e.svg" style="  width:150px;" />                 |      **`\cle UT3`**        |      Clé d'UT 3<sup>e</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-ut-4e.svg" style="  width:150px;" />                 |      **`\cle UT4`**        |      Clé d'UT 4<sup>e</sup> ligne                                                          |
-| <img src="Manuel/images/exemples/cle-ut-5e.svg" style="  width:150px;" />                 |      **`\cle UT5`**        |      Clé d'UT 5<sup>e</sup> ligne                                                          |
+| <img src="images/exemples/cle-de-sol-2e.svg" style="  width:150px;" />                 |      **`\cle G`**        |      Clé de SOL 2<sup>e</sup> ligne                                                          |
+| <img src="images/exemples/cle-de-fa-4e.svg" style="  width:150px;" /> | **`\cle F`** | Clé de FA 4<sup>e</sup> ligne                                    |
+| <img src="images/exemples/cle-de-sol-1ere.svg" style="  width:150px;" />                 |      **`\cle G1`**        |      Clé de SOL 1<sup>ère</sup> ligne                                                          |
+| <img src="images/exemples/cle-de-fa-3e.svg" style="  width:150px;" />                 |      **`\cle F3`**        |      Clé de FA 3<sup>e</sup> ligne                                                          |
+| <img src="images/exemples/cle-ut-1ere.svg" style="  width:150px;" />                 |      **`\cle UT1`**        |      Clé d'UT 1<sup>ère</sup> ligne                                                          |
+| <img src="images/exemples/cle-ut-2e.svg" style="  width:150px;" />                 |      **`\cle UT2`**        |      Clé d'UT 2<sup>e</sup> ligne                                                          |
+| <img src="images/exemples/cle-ut-3e.svg" style="  width:150px;" />                 |      **`\cle UT3`**        |      Clé d'UT 3<sup>e</sup> ligne                                                          |
+| <img src="images/exemples/cle-ut-4e.svg" style="  width:150px;" />                 |      **`\cle UT4`**        |      Clé d'UT 4<sup>e</sup> ligne                                                          |
+| <img src="images/exemples/cle-ut-5e.svg" style="  width:150px;" />                 |      **`\cle UT5`**        |      Clé d'UT 5<sup>e</sup> ligne                                                          |
 
 #### Tonalité de l’expression (armure)
 
@@ -304,7 +305,7 @@ On les notes  `3{note<duree> note note}`
 
 | <span style="display:inline-block;width:200px;">Objet</span> | Code                           | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ------------------------------ | ------------------------------------------------------------ |
-| <img src="Manuel/images/exemples/triolets.svg" style="  width:200px;" /> | **`3{note<duree> note note}`** | TODO : il faudra traiter les quintuplet et autres sextolets de la même façon. |
+| <img src="images/exemples/triolets.svg" style="  width:200px;" /> | **`3{note<duree> note note}`** | TODO : il faudra traiter les quintuplet et autres sextolets de la même façon. |
 
 
 
@@ -325,11 +326,11 @@ Pour d’autres ornements, voir [https://lilypond.org/doc/v2.21/Documentation/no
 
 | <span style="display:inline-block;width:200px;">Objet</span> | <span style="display:inline-block;width:300px;">Code</span> | <span style="display:inline-block;width:200px;">Description</span> |
 | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| <img src="Manuel/images/exemples/trille.svg" style="  width:120px;" /> | **`\tr(c') `**                                              | Noter la note trillée entre parenthèses.                     |
-| <img src="Manuel/images/exemples/trille_note_precise.svg" style="  width:120px;" /> | **`\tr(cis' dis) `**                                        | Pour triller avec une autre note que la note naturelle.      |
-| <img src="Manuel/images/exemples/trille_longue.svg" style="  width:300px;" /> | **`\tr(c'1)- c a\-tr`**                                     | Noter le “tr-” pour commencer et le “-tr” pour finir         |
-| <img src="Manuel/images/exemples/trille_notes_fins.svg" style="  width:300px;" /> | **`\tr(cis'1)- (b16 cis)\-tr d1`**                          | Noter ici la tournure différente à la fin, avec les deux grâce-note entre parenthèses. Note quand même la logique générale. |
-| <img src="Manuel/images/exemples/trille_non_naturelle_et_notes_fins.svg" style="  width:300px;" /> | **`\tr(cis'1 dis)- (b16 cis)\-tr d1`**                      | On ajoute une note trillée avec une note étrangère           |
+| <img src="images/exemples/trille.svg" style="  width:120px;" /> | **`\tr(c') `**                                              | Noter la note trillée entre parenthèses.                     |
+| <img src="images/exemples/trille_note_precise.svg" style="  width:120px;" /> | **`\tr(cis' dis) `**                                        | Pour triller avec une autre note que la note naturelle.      |
+| <img src="images/exemples/trille_longue.svg" style="  width:300px;" /> | **`\tr(c'1)- c a\-tr`**                                     | Noter le “tr-” pour commencer et le “-tr” pour finir         |
+| <img src="images/exemples/trille_notes_fins.svg" style="  width:300px;" /> | **`\tr(cis'1)- (b16 cis)\-tr d1`**                          | Noter ici la tournure différente à la fin, avec les deux grâce-note entre parenthèses. Note quand même la logique générale. |
+| <img src="images/exemples/trille_non_naturelle_et_notes_fins.svg" style="  width:300px;" /> | **`\tr(cis'1 dis)- (b16 cis)\-tr d1`**                      | On ajoute une note trillée avec une note étrangère           |
 
 
 
@@ -339,16 +340,16 @@ Pour d’autres ornements, voir [https://lilypond.org/doc/v2.21/Documentation/no
 | <span style="display:inline-block;width:200px;">Objet</span> | <span style="display:inline-block;width:140px;">Code</span> | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
 | **Non liées non barrées**                                    | **`\gr(notes) note`**                                       |                                                              |
-| Exemple simple                                               | `\gr(b'16) a8 gis16 fais`                                   | <img src="Manuel/images/exemples/grace_simple.svg" style=" width:170px;" /> |
-| Exemple multiple                                             | `\gr(b'16 gis) a4`                                          | <img src="Manuel/images/exemples/grace_multiple.svg" style=" width:110px;" /> |
+| Exemple simple                                               | `\gr(b'16) a8 gis16 fais`                                   | <img src="images/exemples/grace_simple.svg" style=" width:170px;" /> |
+| Exemple multiple                                             | `\gr(b'16 gis) a4`                                          | <img src="images/exemples/grace_multiple.svg" style=" width:110px;" /> |
 | **Non liées barrées**                                        | **`\gr(note/)`**                                            | Remarquer la barre finale qui symbolise la note barrée       |
-| Exemple                                                      | `\gr(b'8/) a4`                                              | <img  src="Manuel/images/exemples/grace_slashed.svg" style=" width:100px;" /> |
-| Exemple multiple                                             | `\gr(b'16 gis/) a4`                                         | <img  src="Manuel/images/exemples/grace_slashed_multiple.svg" style=" width:100px;" />(noter : non barré) |
+| Exemple                                                      | `\gr(b'8/) a4`                                              | <img  src="images/exemples/grace_slashed.svg" style=" width:100px;" /> |
+| Exemple multiple                                             | `\gr(b'16 gis/) a4`                                         | <img  src="images/exemples/grace_slashed_multiple.svg" style=" width:100px;" />(noter : non barré) |
 | **Appoggiature**                                             | **`\gr(note-)`**                                            |                                                              |
-| Exemple                                                      | `\gr(b'8-) a gis16 fis e4`                                  | <img src="Manuel/images/exemples/grace_appoggiature.svg" style=" width:170px;" /> |
-| Exemple multiple                                             | `\gr(b'8 gis-) a4`                                          | <img src="Manuel/images/exemples/grace_appoggiature_multiple.svg" style=" width:100px;" /> |
+| Exemple                                                      | `\gr(b'8-) a gis16 fis e4`                                  | <img src="images/exemples/grace_appoggiature.svg" style=" width:170px;" /> |
+| Exemple multiple                                             | `\gr(b'8 gis-) a4`                                          | <img src="images/exemples/grace_appoggiature_multiple.svg" style=" width:100px;" /> |
 | **Acciaccature**                                             | **`\gr(note/-) note`**                                      |                                                              |
-| Exemple                                                      | `\gr(ais'16/-) b4`                                          | <img src="Manuel/images/exemples/acciaccatura.svg" style=" width:90px;" /> |
+| Exemple                                                      | `\gr(ais'16/-) b4`                                          | <img src="images/exemples/acciaccatura.svg" style=" width:90px;" /> |
 | **Quand plusieurs notes**                                    | **`\grace note[ note note note]`**<br />                    |                                                              |
 
 
@@ -390,7 +391,7 @@ Ci-dessous la syntaxe propre à Lilypond, pour mémoire.
 | <span style="display:inline-block;width:200px;">Objet</span> | <span style="display:inline-block;width:140px;">Code</span> | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
 |                                                              | **`< notes >duree`**                                        | Bien noter que la durée est à l'extérieur de l'accord. Noter aussi que c'est la hauteur de la première note qui détermine la hauteur de référence pour la note suivante |
-| Exemple                                                      | **<c e g c>2.**                                             | <img src="Manuel/images/exemples/accord.svg" style=" width:100px;" /> |
+| Exemple                                                      | **<c e g c>2.**                                             | <img src="images/exemples/accord.svg" style=" width:100px;" /> |
 | Snippet :                                                    | **`<`**                                                     |                                                              |
 
 
@@ -401,10 +402,10 @@ SNIPPET: '<'
 | <span style="display:inline-block;width:200px;">Objet</span> | <span style="display:inline-block;width:140px;">Code</span> | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
 | Liaisons de jeu                                              | **`note1( autres notes)`**                                  |                                                              |
-| exemple                                                      | **`a'( b c d)`**                                            | <img src="Manuel/images/exemples/liaison-de-jeu.svg" style=" width:150px;" /> |
+| exemple                                                      | **`a'( b c d)`**                                            | <img src="images/exemples/liaison-de-jeu.svg" style=" width:150px;" /> |
 | Liaison de durée                                             | **`note~ note`**                                            |                                                              |
-| Exemple simple                                               | **`c1~ c2`**                                                | <img src="Manuel/images/exemples/liaison-de-duree.svg" style=" width:150px;" /> |
-| Exemple avec des accords                                     | **`<c c'>1~ <c c'>4 <c~ g'~>2. <c e g>2`**                  |    <img src="Manuel/images/exemples/liaison-accords.svg" style=" width:200px;" />                                                          |
+| Exemple simple                                               | **`c1~ c2`**                                                | <img src="images/exemples/liaison-de-duree.svg" style=" width:150px;" /> |
+| Exemple avec des accords                                     | **`<c c'>1~ <c c'>4 <c~ g'~>2. <c e g>2`**                  |    <img src="images/exemples/liaison-accords.svg" style=" width:200px;" />                                                          |
 
 
 
@@ -414,16 +415,16 @@ SNIPPET: '<'
 | <span style="display:inline-block;width:200px;">Objet</span> | <span style="display:inline-block;width:300px;">Code</span>  | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Forcer l'attache                                             | **`note[ notes]`**                                           |                                                              |
-| Exemple                                                      | `a'16[ a a a a a a a]`                                       | <img src="Manuel/images/exemples/hampes-accroched.svg" style=" width:200px;" /> |
+| Exemple                                                      | `a'16[ a a a a a a a]`                                       | <img src="images/exemples/hampes-accroched.svg" style=" width:200px;" /> |
 | Forcer l'attache vers le haut                                | **`note^[ notes]`**                                          |                                                              |
-| Exemple                                                      | **`e'16^[ e e e] e`**                                        | <img src="Manuel/images/exemples/hampes-forced-haut.svg" style=" width:140px;" /> |
+| Exemple                                                      | **`e'16^[ e e e] e`**                                        | <img src="images/exemples/hampes-forced-haut.svg" style=" width:140px;" /> |
 | Forcer l'attache vers le bas                                 | **`note_[ notes]`**                                          |                                                              |
-| Exemple                                                      | **`a'16_[ a a a] a`**                                        | <img src="Manuel/images/exemples/hampes-forced-bas.svg" style=" width:140px;" /> |
-| Forcer une hampe seule en haut                               | **`\stemUp e'4 \stemNeutral`**<br />**`e'4^[]`**             | <img src="Manuel/images/exemples/hampes_vers_le_haut.svg" style=" width:80px;" /> |
+| Exemple                                                      | **`a'16_[ a a a] a`**                                        | <img src="images/exemples/hampes-forced-bas.svg" style=" width:140px;" /> |
+| Forcer une hampe seule en haut                               | **`\stemUp e'4 \stemNeutral`**<br />**`e'4^[]`**             | <img src="images/exemples/hampes_vers_le_haut.svg" style=" width:80px;" /> |
 | Forcer les hampes de plusieurs notes non attachées (noires et blanches) | **`\stemUp e'4 f g f \stemNeutral`**<br />**`e'4^[] f^[] g^[] f^[]`** | N1 : Noter que si plusieurs notes (plusieurs noires par exemple) doivent être traitées ensemble et que ce ne sont pas les mêmes hauteurs, il ne faut pas utiliser `e'4^[ f g f]` car dans ce cas tous les hauts de hampes s’aligneraient à la même hauteur. Il est impératif d’utiliser le code ci-contre. Cf. ci-dessous. |
-|                                                              | **`e'4^[ f g b, d f]`**                                      | <img src="Manuel/images/exemples/hampes_plusieurs_vers_haut.svg" style=" width:160px;" /> |
-|                                                              | **`e'4^[] f^[] g^[] b,^[] d^[] f^[]`**                       | <img src="Manuel/images/exemples/hampes_plusieurs_vers_haut_separees.svg" style=" width:160px;" /> |
-| Forcer une hampe seule en bas                                | **`g4_[]`**                                                  | <img src="Manuel/images/exemples/hampes_vers_le_bas.svg" style=" width:80px;" /> |
+|                                                              | **`e'4^[ f g b, d f]`**                                      | <img src="images/exemples/hampes_plusieurs_vers_haut.svg" style=" width:160px;" /> |
+|                                                              | **`e'4^[] f^[] g^[] b,^[] d^[] f^[]`**                       | <img src="images/exemples/hampes_plusieurs_vers_haut_separees.svg" style=" width:160px;" /> |
+| Forcer une hampe seule en bas                                | **`g4_[]`**                                                  | <img src="images/exemples/hampes_vers_le_bas.svg" style=" width:80px;" /> |
 |                                                              |                                                              | Pour plusieurs noires ou plusieurs blanches, cf. la note N1 ci-dessus. |
 
 Voir la page suivante pour la gestion des deux en même temps :
@@ -446,7 +447,7 @@ Il semble qu'il faille utiliser :
 | <span style="display:inline-block;width:100px;">Objet</span> | <span style="display:inline-block;width:440px;">Code</span> | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
 |                                                              | **`<< { note note note } \\ { note note note } >>`**        | Le plus clair et le plus simple est d'utiliser des [variables](#definitions) à la place des notes. La hauteur de la première note du second membre est calculée à partir de la première note du premier membre |
-| Exemple                                                      | **`<< { e'2 f e f } \\ { c,4 g' d g a e' d c } >>`**        | <img src="Manuel/images/exemples/voix-simultanees.svg" style=" width:250px;" /> |
+| Exemple                                                      | **`<< { e'2 f e f } \\ { c,4 g' d g a e' d c } >>`**        | <img src="images/exemples/voix-simultanees.svg" style=" width:250px;" /> |
 | Snippet                                                      | **`2v`**                                                    |                                                              |
 
 Dans cette formule, les deux voix auront leur propre 'voice'.
@@ -457,13 +458,13 @@ Mais il existe d'autres possibilités (cf. le mode d'emploi)
 | <span style="display:inline-block;width:200px;">Objet</span> | <span style="display:inline-block;width:140px;">Code</span> | <span style="display:inline-block;width:300px;">Description</span> |
 | ------------------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
 | **Non liées non barrées**                                    | **`\grace note note`**<br />**`\gr(note) note`**            |                                                              |
-| Exemple                                                      | `\grace ais'16  b4`<br />`\gr(ais'16) b4`                   | <img src="Manuel/images/exemples/grace-note.svg" style=" width:90px;" /> |
+| Exemple                                                      | `\grace ais'16  b4`<br />`\gr(ais'16) b4`                   | <img src="images/exemples/grace-note.svg" style=" width:90px;" /> |
 | **Non liées barrées**                                        | **`\slashedGrace note note`**<br />**`\gr(note/)`**         |                                                              |
-| Exemple                                                      | `\slashedGrace ais'16  b4`<br />`\gr(ais'16/)`              | <img src="Manuel/images/exemples/slashed-grace-note.svg" style=" width:90px;" /> |
+| Exemple                                                      | `\slashedGrace ais'16  b4`<br />`\gr(ais'16/)`              | <img src="images/exemples/slashed-grace-note.svg" style=" width:90px;" /> |
 | **Liées non barrées**                                        | **`\appoggiatura note note`**<br />**`\gr(note-)`**         |                                                              |
-| Exemple                                                      | `\appoggiatura ais'16  b4`<br />`\gr(ais'16-)`              | <img src="Manuel/images/exemples/appoggiatura.svg" style=" width:90px;" /> |
+| Exemple                                                      | `\appoggiatura ais'16  b4`<br />`\gr(ais'16-)`              | <img src="images/exemples/appoggiatura.svg" style=" width:90px;" /> |
 | **Liées barrées**                                            | **`\acciaccatura note note`**<br />**`\gr(note/-) note`**   |                                                              |
-| Exemple                                                      | `\acciaccatura ais'16  b4`<br />`\gr(ais'16/-) b4`          | <img src="Manuel/images/exemples/acciaccatura.svg" style=" width:90px;" /> |
+| Exemple                                                      | `\acciaccatura ais'16  b4`<br />`\gr(ais'16/-) b4`          | <img src="images/exemples/acciaccatura.svg" style=" width:90px;" /> |
 | **Quand plusieurs notes**                                    | **`\grace note[ note note note]`**<br />                    |                                                              |
 
 

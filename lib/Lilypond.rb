@@ -342,6 +342,7 @@ private
           .gsub(/\|:/, '\bar ".|:"')
           .gsub(/:\|/, '_BARRES_REPRISE_FIN_')
           .gsub(/\|\./, '\bar "|."')
+          .gsub(/\|\|/, '\bar "||"')
     str = str.gsub(/_DOUBLE_BARRES_REPRISE_/, '\bar ":|.|:"')
     str = str.gsub(/_BARRES_REPRISE_FIN_/, '\bar ":|."')
     return str
