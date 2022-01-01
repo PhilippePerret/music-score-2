@@ -88,7 +88,7 @@ end
 def system_for_solo(code)
   <<-LILYPOND
 <<
-\\relative c' {
+#{markin_transposition}\\relative c' {
   #{option_no_time}
   #{option_no_barre}
   #{option_no_stem}
@@ -108,7 +108,7 @@ def system_for_piano(code)
   \\new Staff = "haute" {
     % enforce creation of all contexts at this point of time
     \\clef "treble"
-    \\relative c' {
+    #{markin_transposition}\\relative c' {
       #{option_no_time}
       #{option_no_barre}
       #{option_no_stem}
@@ -119,7 +119,7 @@ def system_for_piano(code)
   }
   \\new Staff = "basse" {
     \\clef bass
-    \\relative c {
+    #{markin_transposition}\\relative c {
       #{option_no_time}
       #{option_no_barre}
       #{option_no_stem}
@@ -173,7 +173,7 @@ def staff_for(code, params)
   staff_cle = params[:key] ? "\\clef #{CLE_TO_CLE_LILY[params[:key]]}\n" : ""
   <<-LILYPOND
 \\new Staff <<
-  \\new Voice \\relative c#{relative} {
+  \\new Voice #{markin_transposition}\\relative c#{relative} {
     #{staff_name}#{staff_cle}
     #{option_no_time}
     #{option_no_barre}
@@ -306,6 +306,14 @@ def option_espacements
 
   LPOND
 end
+
+
+##
+# Méthodes quand on doit transposer le fragment
+def markin_transposition
+  options[:transpose] ? "\\transpose #{options[:transpose]} " : "" 
+end
+
 
 # --- MÉTHODES DE TRANSLATION DU CODE MUSIC-SCORE VERS LILYPOND ---
 ##

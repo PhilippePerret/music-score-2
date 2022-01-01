@@ -93,7 +93,8 @@ def build
   # Rabottement de toutes les images produites pour ce score
   #
   if trim_all_files
-    unless data.options[:keep]
+    # puts "data.options['transpose'] : #{data.options['transpose']}"
+    unless data.options['keep']
       File.delete(lilypond_file_path)
     end
     puts "\r🎹 L'image #{image_name}.svg a été produite avec succès.".vert
