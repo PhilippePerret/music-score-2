@@ -42,13 +42,13 @@ def rationnalise_options(options)
   # Si les clés des portées sont définies, il faut les dispatcher
   #
   if options.key?('staves_keys')
-    options['staves_keys'] = options['staves_keys'].split(',').collect{|n|n.strip}
+    options['staves_keys'] = options['staves_keys'].split(',').collect{|n|n.strip}.reverse
   end
   #
   # Si les noms des portées sont définies, il faut les dispatcher
   #
   if options.key?('staves_names')
-    options['staves_names'] = options['staves_names'].split(',').collect{|n|n.strip}
+    options['staves_names'] = options['staves_names'].split(',').collect{|n|n.strip}.reverse
   end
   #
   # Si les clés ou les noms des portées sont définies, il faut
